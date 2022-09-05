@@ -3,8 +3,8 @@ Steps to create application
 Step 1 — App Directory Structure. 
 
     Create a new directory for the routes
-
-   - inside the routes folder create a new file called index.js :
+        mkdir routes:
+        - inside the routes folder create a new file called index.js :
         * touch index.js
             * this is the file that will contain all the api routes for the application
             * will require all the api path and export them to be used in the application
@@ -12,7 +12,7 @@ Step 1 — App Directory Structure.
             * will use the api folder path to create the router for the application
 
      
-    - Create a new folder for the api routes  
+        - Create a new folder for the api routes  
         * mkdir api (this is the folder that will store all the api routes) 
             ___ Create a new file for the api routes
                 * touch index.js
@@ -40,7 +40,91 @@ Step 1 — App Directory Structure.
                     * will export the router to be used in the application
                     * will use the .get method to get all the users and the .post method to create a new user for the application database
 
-                  
+    
+    Create a new directory for the connection
+        mkdir connection or confiq
+        - inside the connection folder create a new file called index.js :
+            * touch connection.js
+                * this is the file that will contain the connection to the application database
+                * will require mongoose to connect to the application database
+                * will export the connection to be used in the application
+                * will use the .connect method to connect to the application database
+                * will use the .env file to store the connection string for the application database using mongoose to connect 
+                    Example: mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', 
+                    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
+
+
+    Create a new directory for the controllers
+        mkdir controllers
+        - inside the controllers folder create a new file called users-controller.js and thoughts-controller.js :
+            * touch users-controller.js and thoughts-controller.js
+                - this is essentialy the file that will contain all the methods for the application database (users and thoughts)
+                * this is the file that will contain all the controllers for the application
+                * will require all the controllers and export them to be used in the application
+                * will require the models to use the models in the controllers eg. User and Thought
+                * will use the .get method to get all the users and thoughts and the .post method to create a new user and thought for the application database
+                * will use the .put method to update a user and thought for the application database
+                * will use the .delete method to delete a user and thought for the application database
+                * will use the .post method to create a new reaction for the application database
+                * will use the .delete method to delete a reaction for the application database
+                * will use the .post method to create a new friend for the application database
+                * will use the .delete method to delete a friend for the application database  
+                * will export the controllers to be used in the application
+            
+            * touch thoughts-controller.js
+                - this is essentialy the file that will contain all the methods for the application database (thouths and reactions)
+                * this is the file that will contain all the controllers for the application
+                * will require all the controllers and export them to be used in the application
+                * will require the models to use the models in the controllers eg. User and Thought
+                * will use the .get method to get all the users and thoughts and the .post method to create a new user and thought for the application database
+                * will use the .put method to update a user and thought for the application database
+                * will use the .delete method to delete a user and thought for the application database
+                * will use the .post method to create a new reaction for the application database
+                * will use the .delete method to delete a reaction for the application database
+                * will use the .post method to create a new friend for the application database
+                * will use the .delete method to delete a friend for the application database  
+                * will export the controllers to be used in the application
+
+    Create a new directory for the models
+        mkdir models
+        - inside the models folder create a new file called index.js :
+            * touch index.js
+                * this is the file that will contain all the models for the application
+                * will require all the models and export them to be used in the application
+                * will require mongoose to create the models for the application database
+                * will use the .Schema method to create the models for the application database
+                * will use the .model method to create the models for the application database
+                * will export the models to be used in the application
+        
+        - inside the models folder create a new file called User.js:
+           * touch User.js
+                * this is the file that will contain the User model for the application
+                * will require mongoose to create the User model for the application database
+                * will use the .Schema method to create the User model for the application database
+                * will use the .model method to create the User model for the application database
+                * will export the User model to be used in the application
+
+        - inside the models folder create a new file called Thought.js:
+            * touch Thought.js
+                * this is the file that will contain the Thought model for the application
+                * will require mongoose to create the Thought model for the application database
+                * will use the .Schema method to create the Thought model for the application database
+                * will use the .model method to create the Thought model for the application database
+                * will export the Thought model to be used in the application
+
+    Create a new directory for the utils
+        mkdir utils
+        - inside the utils folder create a new file called date.js :
+            * touch date.js
+                * this is the file that will contain the date for the application
+                * will require moment to create the date for the application database
+                * will export the date to be used in the application
+                * will use the .format method to create the date for the application database
+                *   Example: moment().format('MMMM Do YYYY, h:mm:ss a');
+                * will use time stamp to create the date for the application database
+            
+
+                            
 
          
 
