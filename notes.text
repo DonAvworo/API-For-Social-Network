@@ -1,0 +1,51 @@
+Steps to create application
+
+Step 1 — App Directory Structure. 
+
+    Create a new directory for the routes
+
+   - inside the routes folder create a new file called index.js :
+        * touch index.js
+            * this is the file that will contain all the api routes for the application
+            * will require all the api path and export them to be used in the application
+            * will require express and create a router for the application
+            * will use the api folder path to create the router for the application
+
+     
+    - Create a new folder for the api routes  
+        * mkdir api (this is the folder that will store all the api routes) 
+            ___ Create a new file for the api routes
+                * touch index.js
+                    * this is the file that will contain all the api routes for the application
+                    * will require all the api routes and export them to be used in the application
+                    * will require express and create a router for the application
+            
+            ___ Create a new file for thoughts routes
+                * touch thoughts-routes.js
+                    * this is the file that will contain all the thoughts routes for the application
+                    * will require all the thoughts routes and export them to be used in the application
+                    * will require express and create a router for the application
+                    * will require the thoughts controller to use the methods in the controller
+                    * will use the router to create the routes for the application
+                    * will export the router to be used in the application
+                    * will use the .get method to get all the thoughts and the .post method to create a new thought for the application database
+
+            ___ Create a new file for users routes
+                * touch users-routes.js
+                    * this is the file that will contain all the users routes for the application
+                    * will require all the users routes and export them to be used in the application
+                    * will require express and create a router for the application
+                    * will require the users controller to use the methods in the controller
+                    * will use the router to create the routes for the application
+                    * will export the router to be used in the application
+                    * will use the .get method to get all the users and the .post method to create a new user for the application database
+
+                  
+
+         
+
+
+
+Step 2 — Create the user routes.
+
+
