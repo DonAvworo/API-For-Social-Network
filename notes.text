@@ -97,7 +97,7 @@ Step 1 — App Directory Structure.
                 * will export the models to be used in the application
         
         - inside the models folder create a new file called User.js:
-           * touch User.js
+           * touch User.js (this is essentially the Schema for the User model)
                 * this is the file that will contain the User model for the application
                 * will require mongoose to create the User model for the application database
                 * will use the .Schema method to create the User model for the application database
@@ -105,7 +105,7 @@ Step 1 — App Directory Structure.
                 * will export the User model to be used in the application
 
         - inside the models folder create a new file called Thought.js:
-            * touch Thought.js
+            * touch Thought.js (this is essentially the Schema for the Thought model)
                 * this is the file that will contain the Thought model for the application
                 * will require mongoose to create the Thought model for the application database
                 * will use the .Schema method to create the Thought model for the application database
@@ -126,5 +126,13 @@ Step 1 — App Directory Structure.
 
 Step 2 — write codes 
  
+add dependencies to package.json
+    * npm init -y
+    * npm i express
+    * npm i mongoose
+    * npm i dotenv
+    * npm i nodemon
+    * npm i dateformat
+
 
 
