@@ -122,6 +122,57 @@ Step 1 — App Directory Structure.
                 * will use the .format method to create the date for the application database
                 *   Example: moment().format('MMMM Do YYYY, h:mm:ss a');
                 * will use time stamp to create the date for the application database
+
+    Create a new directory for the seed
+        mkdir seed
+        - inside the seed folder create a new file called index.js :
+            * touch index.js
+                * this is the file that will contain the seed for the application
+                * will require mongoose to create the seed for the application database
+                * will require the models to use the models in the seed eg. User and Thought
+                * will use the .connect method to connect to the application database
+                * will use the .disconnect method to disconnect from the application database
+                * will use the .create method to create the seed for the application database
+                * will export the seed to be used in the application
+        
+        - inside the seed folder create a new file called user-seeds.js :
+            * touch user-seeds.js
+                * this is the file that will contain the user seed for the application
+                * will require mongoose to create the user seed for the application database
+                * will require the models to use the models in the seed eg. User and Thought
+                * will use the .connect method to connect to the application database
+                * will use the .disconnect method to disconnect from the application database
+                * will use the .create method to create the user seed for the application database
+                * will export the user seed to be used in the application
+
+        - inside the seed folder create a new file called thought-seeds.js :
+            * touch thought-seeds.js
+                * this is the file that will contain the thought seed for the application
+                * will require mongoose to create the thought seed for the application database
+                * will require the models to use the models in the seed eg. User and Thought
+                * will use the .connect method to connect to the application database
+                * will use the .disconnect method to disconnect from the application database
+                * will use the .create method to create the thought seed for the application database
+                * will export the thought seed to be used in the application
+
+    Create a an environment file
+        - inside the root folder create a new file called .env :
+            * touch .env
+                * this is the file that will contain the environment variables for the application
+                * will require dotenv to create the environment variables for the application database
+                * will use the .config method to create the environment variables for the application database
+                * will export the environment variables to be used in the application  
+               
+                ========================================================================================
+                IMPORTANT!!! - DO NOT FORGET TO ADD THE .env FILE TO THE .gitignore FILE
+                ________________________________________________________________________________________
+                
+                Also IMPORTANT ABOUT THE .env FILE
+                ________________________________________________________________________________________
+                * this is the file that will contain the connection string for the application database
+                * will use the .env file to store the connection string for the application database using mongoose to connect 
+                    Example: mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', 
+                    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false });
             
 
 Step 2 — write codes 
@@ -136,3 +187,34 @@ add dependencies to package.json
 
 
 
+    {
+        "dependencies": {
+          "dateformat": "^5.0.3",
+          "dotenv": "^16.0.2",
+          "express": "^4.18.1",
+          "mongoose": "^6.5.4",
+          "nodemon": "^2.0.19"
+        }
+      }
+
+       
+    
+# add the port to the list of ports to be scanned
+ports.append(port) 
+# add database entry
+db.add_port(
+    port, 
+    host = host, 
+    service = service, 
+    state = state, 
+    reason = reason, 
+    version = version, 
+    script = script)
+
+# scan the ports
+for port in ports:
+    # scan the port
+    scan_port(port)
+
+# close the database
+db.close()

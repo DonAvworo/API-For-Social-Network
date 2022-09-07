@@ -8,4 +8,4 @@ router.use('/thoughts', thoughtRoutes);             // use the thoughtRoutes fil
 // add prefix of `/users` to routes created in `user-routes.js`
 router.use('/users', userRoutes);                   // use the userRoutes file for the /users route
 
-module.exports = router;                            // export the router
+module.exports = router;                            // export the router called in server.js
