@@ -1,4 +1,22 @@
 {
+  "name": "api-for-social-network",
+  "version": "1.0.0",
+  "description": "Datsbase for social network",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DonAvworo/API-For-Social-Network.git"
+  },
+  "author": "Don Avworo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DonAvworo/API-For-Social-Network/issues"
+  },
+  "homepage": "https://github.com/DonAvworo/API-For-Social-Network#readme",
   "dependencies": {
     "dateformat": "^5.0.3",
     "dotenv": "^16.0.2",
